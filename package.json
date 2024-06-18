@@ -1,0 +1,21 @@
+{
+  "name": "js-svc-generator",
+  "version": "1.0.0",
+  "description": "An SVG generator",
+  "main": "index.js",
+  "type": "module",
+
+  "scripts": {
+    "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest"
+  },
+  "keywords": [
+    "SVG",
+    "Node",
+    "JavaScript"
+  ],
+  "author": "Eric Roys",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
