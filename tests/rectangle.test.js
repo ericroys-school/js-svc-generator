@@ -28,11 +28,19 @@ describe("Rectangle tests", () => {
           //default 
           expect(s.getRounded()).toBe(0);
 
-
           s.setRounded(33);
           expect(s.getRounded()).toBe(33);
-  
         });
+      })
+      describe("Render override", ()=> {
+        it("should render a rect object with appropriate tags", ()=> {
+          let s = new Rectangle(300, 200, 5, 4);
+          s.setBorder(5, "blue");
+          s.setFill("orange");
+          let expected = `<rect x="5" y="4" height="300" width="200" stroke="blue" stroke-width="5" fill="orange"/>`
+          expect(s.render()).toBe(expected);
+
+        })
       })
 });
 
