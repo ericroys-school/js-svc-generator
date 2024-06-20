@@ -1,5 +1,5 @@
 import { expect } from "@jest/globals";
-import { Triangle } from "../lib/triangle";
+import { Triangle } from "../lib/triangle.js";
 
 describe("Triangle tests", () => {
   describe("Not null constructor test", () => {
@@ -9,15 +9,23 @@ describe("Triangle tests", () => {
     });
   });
   describe("Get path for the triangle", () => {
-    it("", () => {
+    it("Path should return appropriate string based on algorithm", () => {
+      /* Algorithm should match
+      `M${this.getWidth() / 2} ${this.getBorderWidth() + 2} L${
+        this.getBorderWidth() + 2
+      } ${this.getHeight()} L${
+        this.getWidth() - (this.getBorderWidth() + 2)
+      } ${this.getHeight()} Z`;      
+      */
+      
       let s = new Triangle(100, 100);
       let expected = `M50 2 L2 100 L98 100 Z`;
-      let d = `M${s.getWidth() / 2} ${s.getBorderWidth() + 2} L${
-        s.getBorderWidth() + 2
-      } ${s.getHeight()} L${
-        s.getWidth() - (s.getBorderWidth() + 2)
-      } ${s.getHeight()} Z`;
-      expect(d).toEqual(expected);
+      expect(s.getPath()).toEqual(expected);
+      s.setBorder(5, "brown");
+      expect(s.getPath()).toEqual(`M50 7 L7 100 L93 100 Z`);
+      s = new Triangle(300, 200);
+      s.setBorder(10, "blue");
+      expect(s.getPath()).toEqual(`M100 12 L12 300 L188 300 Z`);
     });
   });
 });
