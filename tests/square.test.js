@@ -1,4 +1,4 @@
-import { Square } from "../lib/square.js";
+import { Square } from "../lib/shapes/square.js";
 
 describe('Square Tests', () => {
     describe("Not null constructor test", () => {

@@ -1,5 +1,5 @@
 import { expect } from "@jest/globals";
-import { Rectangle } from "../lib/rectangle";
+import { Rectangle } from "../lib/shapes/rectangle";
 
 
 describe("Rectangle tests", () => {

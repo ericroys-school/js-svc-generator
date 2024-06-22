@@ -1,4 +1,4 @@
-import { Circle } from "../lib/circle.js";
+import { Circle } from "../lib/shapes/circle.js";
 
 describe("Circle Tests", () => {
   describe("Not null constructor test", () => {

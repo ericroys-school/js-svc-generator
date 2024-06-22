@@ -1,4 +1,4 @@
-import { Text } from "../lib/text.js";
+import { Text } from "../lib/shapes/text.js";
 
 describe("Text tests", () => {
   describe("Not null constructor test", () => {

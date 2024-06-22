@@ -1,4 +1,4 @@
-import { shapeFactory } from "../lib/shapeFactory.js";
+import { shapeFactory } from "../lib/shapes/shapeFactory.js";
 
 describe("Shape Factory tests", () => {
   describe("Factor a square with defaults", () => {

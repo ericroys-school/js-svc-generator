@@ -1,5 +1,5 @@
 import { expect } from "@jest/globals";
-import { Shape } from "../lib/shape.js";
+import { Shape } from "../lib/shapes/shape.js";
 
 describe("Shape tests", () => {
   describe("Not null constructor test", () => {
