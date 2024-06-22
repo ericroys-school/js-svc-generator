@@ -1,4 +1,4 @@
-import { SVGBuilder } from "../lib/svgBuilder.js";
+import { SVGBuilder } from "../lib/svg/svgBuilder.js";
 
 describe("SVG Builder tests", () => {
   describe("Not null constructor test", () => {
