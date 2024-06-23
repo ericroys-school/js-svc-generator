@@ -1,3 +1,4 @@
+import { Triangle } from "../lib/shapes/triangle.js";
 import { SVGBuilder } from "../lib/svg/svgBuilder.js";
 
 describe("SVG Builder tests", () => {
@@ -33,7 +34,7 @@ describe("SVG Builder tests", () => {
         .textBorder(2)
         .textColor("blue")
         .textBorderColor("orange")
-        let d = `<svg height="300" width="200" xmlns="http://www.w3.org/2000/svg"> <rect x="0" y="0" height="200" width="200" stroke="orange" stroke-width="2" fill="blue"/> <text x="70" y="160" fill="blue" stroke="orange" stroke-width="2">BOB</text></svg>`
+        let d = `<svg height="300" width="200" xmlns="http://www.w3.org/2000/svg"> <rect x="0" y="0" height="200" width="200" stroke="orange" stroke-width="2" fill="blue"/> <text x="40" y="170" fill="blue" stroke="orange" stroke-width="2" font-size="60">BOB</text></svg>`
         expect(s.build()).toEqual(d);
     })
     it("Should build svg with circle, no text", ()=> {
@@ -57,7 +58,7 @@ describe("SVG Builder tests", () => {
         .textColor("blue")
         .textBorderColor("orange")
 
-        let d = `<svg height="300" width="200" xmlns="http://www.w3.org/2000/svg"> <circle r="100" cx="100" cy="100" fill="blue" stroke="orange" stroke-width="2"/> <text x="70" y="160" fill="blue" stroke="orange" stroke-width="2">BOB</text></svg>`
+        let d = `<svg height="300" width="200" xmlns="http://www.w3.org/2000/svg"> <circle r="100" cx="100" cy="100" fill="blue" stroke="orange" stroke-width="2"/> <text x="40" y="170" fill="blue" stroke="orange" stroke-width="2" font-size="60">BOB</text></svg>`
         expect(s.build()).toEqual(d);
     })    
     it("Should build svg with triangle, no text", ()=> {
@@ -81,7 +82,7 @@ describe("SVG Builder tests", () => {
         .textBorderColor("orange");
 
         console.log(s.build())
-        let d = `<svg height="300" width="200" xmlns="http://www.w3.org/2000/svg"> <path d="M100 4 L4 300 L196 300 Z" stroke="orange" stroke-width="2" fill="blue"/> <text x="70" y="160" fill="blue" stroke="orange" stroke-width="2">BOB</text></svg>`
+        let d = `<svg height="300" width="200" xmlns="http://www.w3.org/2000/svg"> <path d="M100 4 L4 300 L196 300 Z" stroke="orange" stroke-width="2" fill="blue"/> <text x="40" y="170" fill="blue" stroke="orange" stroke-width="2" font-size="60">BOB</text></svg>`
         expect(s.build()).toEqual(d);
     })
   });

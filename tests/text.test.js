@@ -17,7 +17,7 @@ describe("Text tests", () => {
       s.setFill("orange");
       let expected = `<text x="${width / 2 - fontSize}" y="${
         height / 2 + fontSize / 3
-      }" fill="orange" stroke="blue" stroke-width="5">Bob</text>`;
+      }" fill="orange" stroke="blue" stroke-width="5" font-size="35">Bob</text>`;
       expect(s.render()).toBe(expected);
     });
   });
